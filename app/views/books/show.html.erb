@@ -1,0 +1,16 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
+
+<%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
+ <p>     <strong> Title:</strong> <%= @book.title  %></p>
+
+
+ <p>     <strong>Body:</strong> <%= @book.body %></p>
+
+ <%= link_to "edit", edit_book_path(@book.id) %>
+  |
+ <%= link_to "back", "/books" %>
+
+<% end %>
